@@ -1,0 +1,123 @@
+<%- include('./includes/header'); -%>
+    <%- include('./includes/sidebar'); -%>
+    <div class="loader-container">
+        <div class="loader"></div>
+        <span>
+            <h3>Loading...</h3>
+        </span>
+    </div>
+    <div id='center' class="main center">
+        <div style="padding: 20px;">
+            <h2>Substation Maintenance History</h2>
+            <!-- <button class="btn btn-secondary" onclick="location.reload()" style="float: right; margin: 10px;">Reset
+                filter</button> -->
+            <!-- <div class="form-group">
+            <input type="checkbox" name="scada" id="scada" onclick="checkboxClick('scada')">
+            <label for="scada">&nbsp;Scada Name</label>
+            <div id="scada-container">
+                <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+            </div>
+        </div> -->
+            <table class="table" id="smhData">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ Ref</label>
+
+                                <div id="boq_ref-container">
+                                </div>
+                            </div>
+                        </th>
+            
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ Description</label>
+                                <div id="boq_description-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Date</label>
+                                <div id="date-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ Sequence</label>
+                                <div id="boq_sequence-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Substation Name</label>
+                                <div id="substation_name-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Bay No</label>
+                                <div id="bay_no-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Voltage Ratings</label>
+                                <div id="voltage_ratings-container">
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Done by</label>
+                                <div id="done_by-container">
+                                </div>
+                            </div>
+                        </th>
+               
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Zone</label>
+                                <div id="zone-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Report</label>
+                                <div id="pdf-container">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id=smh-filter-table>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script> -->
+    <script src="../assets/venders/bootstrap-multiselect.min.js"></script>
+    <!-- <script src="../assets/venders/popper.js"></script> -->
+    <script src="../renderer/substationMaintenanceHistory.js"></script>
+    <script src="../renderer/commonRenderer.js"></script>
+    <script src="../assets/js/jquery.dataTables.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ABB</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-select/dist/css/bootstrap-select.css">
+</head>
+
+<body>
+    <div class="abb-electron-form">
+        <h2>ABB</h2>
+        <form>
+            <h6 style="color: red; text-align: center;">*Check the field if you are adding new </h6>
+            <div class="form-group">
+                <input type="checkbox" name="substation" id="substation" onclick="checkboxClick('substation')">
+                <label for="substation">&nbsp;Substation</label>
+                <div id="substation-container">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="scada" id="scada" onclick="checkboxClick('scada')">
+                <label for="scada">&nbsp;Scada Name</label>
+                <div id="scada-container">
+                    <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+                </div>
+            </div>
+            <div class="form-group" id="id-container">
+                <!-- <input type="checkbox" name="id" id="id" onclick="checkboxClick('id')"> -->
+                <!-- <label for="id">&nbsp;ID</label>
+                <input type="text" name="id-abb" id="id-abb" placeholder="Enter ID"> -->
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="zone" id="zone" onclick="checkboxClick('zone')">
+                <label for="zone">&nbsp;Zone</label>
+
+                <div id="zone-container">
+                    <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="voltage" id="voltage" onclick="checkboxClick('voltage')">
+                <label for="voltage">&nbsp;Voltage</label>
+                <div id="voltage-container">
+                    <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="gis-type" id="gis-type" onclick="checkboxClick('gis-type')">
+                <label for="gis-type">&nbsp;GIS Type</label>
+                <div id="gis-type-container">
+                    <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bay">Bay</label>
+                <input type="text" name="bay-abb" id="bay-abb" placeholder="Enter bay name" />
+            </div>
+            <!-- <div class="form-group">
+                <input type="file" name="bayfile" id="bayfile" />
+            </div> -->
+            <input type="button" value="Submit" onclick="submitData()" />
+        </form>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <!-- <script src="../assets/venders/popper.js"></script> -->
+    <script src="../renderer/addDataRenderer.js"></script>
+</body>
+
+</html>

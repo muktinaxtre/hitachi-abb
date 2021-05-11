@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HITACHI ABB</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="../assets/venders/datepicker/dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/venders/datepicker/assets/libs/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css">
+            <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .dtp-picker-days,
+        .dtp-actual-day,
+        .dtp-actual-num {
+            display: none;
+        }
+
+        .dtp-header {
+            padding: 15px !important;
+        }
+
+        .dtp div.dtp-date,
+        .dtp div.dtp-time {
+            background: #1b1b1b !important;
+        }
+
+        .dtp>.dtp-content>.dtp-date-view>header.dtp-header {
+            background: #5d5e5c;
+        }
+
+        .dtp .p10>a {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../assets/images/logo_horizontal.png" alt="" height="30px" style="margin:15px 0px 0px 50px;">
+        <button class="btn btn-secondary" onclick="location.reload()" style="float: right; margin: 10px;">Reset
+            filter</button>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <!-- <li>Jelena Jovanovic <span>Web Developer</span></li> -->
+    
+            <!-- <li><span>General</span></li> -->
+            <li><a href="javascript:void(0)" onclick="loadNewData('table.html')">GIS Data</a></li>
+            <hr>
+            <li style="cursor: defaulr;"><span>Report</span></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('viTable2.html')">Visual Inspection</a></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('ocTable.html')">Operational Check</a></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('pmTable.html')">Periodic Maintenance</a></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('cbcmTable.html')">CBCM</a></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('mfTable.html')">Major Findings</a></li>
+            <li><a href="javascript:void(0)" onclick="loadNewData('substationMaintenanceHistory.html')">Substation Maintenance
+                    History</a></li>
+            <hr>
+        </ul>
+    </div>
+
+    <div class="abb-electron-form">
+        <h2>Add Major Findng Data</h2>
+        <form id="mfForm">
+
+            <div class="form-group">
+                <input type="text" class="datetimepicker" name="month" id="month"
+                    placeholder="Click here to select date" required>
+            </div>
+
+            <div class="form-group">
+                <input type="file" name="mfExcel" id="mfExcel">
+            </div>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="../assets/venders/datepicker/assets/libs/moment/moment.js"></script>
+    <script
+        src="../assets/venders/datepicker/assets/libs/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker-custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker').bootstrapMaterialDatePicker({
+                format: 'MM-YYYY',
+                time: false,
+                shortTime: false,
+            });
+
+        })
+    </script>
+    <script src="../renderer/addMfTableRenderer.js"></script>
+    <script src="../renderer/commonRenderer.js"></script>
+</body>
+
+</html>

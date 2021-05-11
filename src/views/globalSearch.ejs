@@ -1,0 +1,170 @@
+<%- include('./includes/header'); -%>
+    <%- include('./includes/sidebar'); -%>
+    <div class="container-fluid" style="margin-top: 100px;">
+        <div style="float: right; margin-right: 10px;">
+            <button class="btn btn-danger" onclick="downloadSheet()"> Expost as Excel</button>
+        </div>
+        <form action="">
+            <div class="row">
+
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control myInput" id="substation_name"
+                        placeholder="By Substation Name" onkeyup="findData('substation_name')">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control myInput" id="voltage" placeholder="By Voltage"
+                        onkeyup="findData('voltage')">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control myInput" id="bay_no" placeholder="By Bay No"
+                        onkeyup="findData('bay_no')">
+                </div>
+                <div class="col-md-2">
+                    <!-- <input type="text" id="month" placeholder="By month" "> -->
+                    <select class=" form-control myInput" name=" month" id="month" onchange="findData('month')"
+                        style="padding:10px 20px 5px 40px;">
+                        <option value="">By Month</option>
+                        <option value="-01-">Jan</option>
+                        <option value="-02-">Feb</option>
+                        <option value="-03-">Mar</option>
+                        <option value="-04-">Apr</option>
+                        <option value="-05-">May</option>
+                        <option value="-06-">Jun</option>
+                        <option value="-07-">Jul</option>
+                        <option value="-08-">Aug</option>
+                        <option value="-09-">Sept</option>
+                        <option value="-10-">Oct</option>
+                        <option value="-11-">Nov</option>
+                        <option value="-12-">Dec</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control myInput" id="year" placeholder="By Year"
+                        onkeyup="findData('year')">
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+        </form>
+    </div>
+    <!-- <input type="text" id="myInput" onkeyup="findData()" placeholder="Search" title="Type in a name"> -->
+    <div class="loader-container">
+        <div class="loader"></div>
+        <span>
+            <h3>Loading...</h3>
+        </span>
+    </div>
+    <div id='center' class="main center" style="height: 76%;">
+        <div style="padding: 20px;">
+            <h2>Find Data</h2>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Report</label>
+
+                                <div id="report-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ Ref</label>
+
+                                <div id="boq_ref-container">
+                                </div>
+                            </div>
+                        </th>
+                        
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ Sequence</label>
+                                <div id="boq_sequence-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Date</label>
+                                <div id="date-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Substation Name</label>
+                                <div id="substation_name-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Bay No</label>
+                                <div id="bay_no-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Voltage Ratings</label>
+                                <div id="voltage_ratings-container">
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Done by</label>
+                                <div id="done_by-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Work Order No</label>
+                                <div id="work_order_no-container">
+                                </div>
+                            </div>
+                        </th>
+                     
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Zone</label>
+                                <div id="zone-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Report</label>
+                                <div id="pdf-container">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id=all-filter-table>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script> -->
+    <script src="../assets/venders/bootstrap-multiselect.min.js"></script>
+    <!-- <script src="../assets/venders/popper.js"></script> -->
+    <script src="../renderer/globalSearchRenderer.js"></script>
+    <script src="../renderer/commonRenderer.js"></script>
+</body>
+
+</html>

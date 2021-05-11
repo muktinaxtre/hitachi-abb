@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>HITACHI ABB</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../node_modules/bootstrap-select/dist/css/bootstrap-select.css">
+</head>
+
+<body>
+  <div class="abb-electron-form">
+    <!-- <h2>ABB</h2> -->
+    <form>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <input type="button" value="GIS Data" onclick="loadNewData('table.ejs')" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <input type="button" value="Visual Inspection" onclick="loadNewData('viTable2.ejs')" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <input type="button" value="Operatioal Check" onclick="loadNewData('ocTable.ejs')" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <input type="button" value="Periodic Maintenance" onclick="loadNewData('pmTable.ejs')" />
+        </div>
+      </div><div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <input type="button" value="CBCM" onclick="loadNewData('cbcmTable.ejs')" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <input type="button" value="Major Findings" onclick="loadNewData('mfTable.ejs')" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="form-group">
+            <input type="button" value="Substation Maintenance History" onclick="loadNewData('substationMaintenanceHistory.ejs')" />
+          </div>
+        </div>
+      </div>
+  </div>
+  </form>
+  </div>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <!-- <script src="../assets/venders/popper.js"></script> -->
+  <script src="../renderer/indexRenderer.js"></script>
+  <script src="../renderer/commonRenderer.js"></script>
+</body>
+
+</html>

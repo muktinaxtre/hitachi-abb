@@ -1,0 +1,41 @@
+<%- include('./common'); -%>
+
+
+    <div class="abb-electron-form">
+        <h2 style="color: aliceblue;">Substation Maintenance History</h2>
+        <span style="float: right;"><a href="../../../../../public/sample/VI_OC_PM_CBCM Combined file-sample.xlsx">Download Sample</a></span>
+        <form id="mfForm">
+            <div class="form-group">
+                <input type="checkbox" name="addNew" id="addNew" value="true">
+                <label for="addNew">&nbsp;Replace all the data and add as new</label>
+            </div>
+            <div class="form-group">
+                <input type="file" name="mfExcel" id="mfExcel" required>
+            </div>
+            <button type="submit" id="btn-submit-id">Submit</button>
+            <!-- <input type="submit" value="Submit"/> -->
+        </form>
+    </div>
+    <div class="abb-electron-form" id="processing" style="margin-top: 10px; display: none;">
+        <ul style="list-style: none;">
+            <li id="deleting-li" style="display: none;"><i class="fa fa-spin fa-spinner" id="deleting"
+                    aria-hidden="true"></i>&nbsp;<span>Deleting Old data</span></li>
+            <li id="adding-li" style="display: none;"><i class="fa fa-spin fa-spinner" id="adding"
+                    aria-hidden=" true"></i>&nbsp;<span>Adding New Data</span></li>
+            <li id="completed-li" style="display: none;"><i class="fa fa-check text-success" id="completed"
+                    aria-hidden="true"></i>&nbsp;Completed</li>
+            <li id="redirecting-li" style="display: none;"><i class="fa fa-spin fa-spinner" id="redirecting"
+                    aria-hidden="true"></i>&nbsp;Redirecting to Substation Maintenance History</li>
+        </ul>
+    </div>
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="../../assets/venders/datepicker/assets/libs/moment/moment.js"></script>
+
+    <script src="../../renderer/updateData/addSmhDataRenderer.js"></script>
+    <script src="../../renderer/commonRenderer.js"></script>
+</body>
+
+</html>

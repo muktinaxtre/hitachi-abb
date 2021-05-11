@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HITACHI ABB</title>
+    <link rel="stylesheet" href="../assets/css/loader.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../assets/venders/bootstrap-multiselect.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="../assets/images/logo_horizontal.png" alt="" height="30px" style="margin:15px 0px 0px 50px;">
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+
+    <%- include('./includes/sidebar'); -%>
+
+    <div id='center' class="main center">
+        <div style="padding: 20px;">
+            <h2>Instructions to add new Sheet</h2>
+        
+            <ul>
+                <li>Download Sample before upload a sheet</li>
+                <img src="../assets/images/inst_1.png" alt="" width="50%">
+                <li>The sheet should be in 'xlsx' format</li>
+                <li>Copy your data under same heading</li>
+                <li>Do not change any heading of the sheet</li>
+                <li>Do not add any extra heading in the shhet</li>
+                <li>Sheet's first row should be heading and data should be written from the second line</li>
+                <li>Do not add extra Sl No; It will add blank data</li>
+                <li>Check the checkbox if you want to remove all the old data and add new</li>
+                <li>Do not check the checkbox if you want to add new records over old records</li>
+            </ul>
+        
+        </div>
+
+        <div style="padding: 20px;">
+            <h2>Update PDF</h2>
+        
+            <ul>
+                <li>Go to start menu</li>
+                <li>Right Click on <b>hitachi-abb > More > Open file location</b></li>
+                <img src="../assets/images/instruction (1).png" alt="" width="50%">
+                <li>A folder will open containg <b>hitachi-abb</b> shortcut file </li>
+                <li>Right Click on that and again click on 'Open file location'</li>
+                <img src="../assets/images/instruction (2).png" alt="" width="50%">
+                <li>Now open <b>public > uploads</b> </li>
+                <img src="../assets/images/instruction (3).png" alt="" width="50%">
+                <li>Inside upload folder you can see the sub folders</li>
+                <img src="../assets/images/instruction (3).png" alt="" width="50%">
+                <li>Put your pdf file as per their sheet</li>
+                <li><b>Name should be same as the name filled in sheet</b></li>
+                <li>Otherwise it will give a blank page while open the pdf</li>
+                
+            </ul>
+        
+        </div>
+    </div>
+<script>
+    const electron = require('electron');
+        const { ipcRenderer } = electron;
+</script>
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="../assets/venders/datepicker/assets/libs/moment/moment.js"></script>
+        <script src="../renderer/commonRenderer.js"></script>
+    </body>
+    
+</html>

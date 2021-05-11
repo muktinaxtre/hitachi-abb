@@ -1,0 +1,146 @@
+<%- include('./includes/header'); -%>
+    <%- include('./includes/sidebar'); -%>
+    <!-- <div class="loader-container">
+        <div class="loader"></div>
+        <span>
+            <h3>Loading...</h3>
+        </span>
+    </div> -->
+    <div id='center' class="main center">
+        <div style="padding: 20px;">
+            <h2>Major Finding</h2>
+            <br>
+            <br>
+            <div style="text-align: center; padding: 20px;">
+                <!-- <input type="text" class="datetimepicker" style="width: 200px;" name="month" id="month"
+                    placeholder="Select Month to view Data" required>
+                <input type="submit" value="Get Data" class="btn btn-secondary"> -->
+                <label for="">Select Month</label>
+                <select name="mainMonth" id="mainMonth" onchange="loadAllmfDataSelect()">
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <!-- <button class="btn btn-secondary" onclick="location.reload()" style="float: right; margin: 10px;">Reset
+                filter</button> -->
+            <!-- <div class="form-group">
+            <input type="checkbox" name="scada" id="scada" onclick="checkboxClick('scada')">
+            <label for="scada">&nbsp;Scada Name</label>
+            <div id="scada-container">
+                <select name="" id="" class="selectpicker" title="- Select Substation -"></select>
+            </div>
+        </div> -->
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">BOQ No</label>
+
+                                <div id="boq_no-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Date</label>
+                                <div id="date-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Zone</label>
+                                <div id="zone-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Substation</label>
+                                <div id="substation-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Rating</label>
+                                <div id="rating-container">
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Location</label>
+                                <div id="location-container">
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Visual Inspection Major Findings</label>
+                                <div id="visual_inspection_major_findings-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Recommended Action</label>
+                                <div id="recommended_action-container">
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Action Taken</label>
+                                <div id="action_taken-container">
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="form-group">
+                                <label for="">Status</label>
+                                <div id="status-container">
+                                </div>
+                            </div>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody id=oc-filter-table>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script> -->
+    <script src="../assets/venders/bootstrap-multiselect.min.js"></script>
+    <script src="../assets/venders/datepicker/assets/libs/moment/moment.js"></script>
+    <script
+        src="../assets/venders/datepicker/assets/libs/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker-custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker').bootstrapMaterialDatePicker({
+                format: 'MM-YYYY',
+                time: false,
+                shortTime: false,
+            });
+
+        })
+    </script>
+    <!-- <script src="../assets/venders/popper.js"></script> -->
+    <script src="../renderer/mfTableRenderer.js"></script>
+    <script src="../renderer/commonRenderer.js"></script>
+</body>
+
+</html>

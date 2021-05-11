@@ -1,0 +1,129 @@
+.abb-electron-form {
+  /* font-family: "Open Sans Condensed", arial, sans; */
+  width: 500px;
+  padding: 30px;
+  background: #ffffff;
+  margin: 20% auto;
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.abb-electron-form h2 {
+  background: #4d4d4d;
+  text-transform: uppercase;
+  /* font-family: "Open Sans Condensed", sans-serif; */
+  color: #797979;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px;
+}
+
+.abb-electron-form option {
+  background-color: #1f2727;
+  color: #ffffff;
+  font-size: large;
+}
+
+option:hover {
+  background-color: yellow;
+}
+
+.abb-electron-form input[type="text"], .abb-electron-form input[type="date"], .abb-electron-form input[type="datetime"], .abb-electron-form input[type="email"], .abb-electron-form input[type="number"], .abb-electron-form input[type="search"], .abb-electron-form input[type="time"], .abb-electron-form input[type="url"], .abb-electron-form input[type="password"], .abb-electron-form textarea, .abb-electron-form select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px Arial, Helvetica, sans-serif;
+  height: 45px;
+}
+
+.bootstrap-select {
+  width: 100% !important;
+  border-bottom: 1px black;
+}
+
+.bootstrap-select button {
+  padding: 10px;
+  height: 40px;
+  font: 16px Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #ddd;
+}
+
+.bootstrap-select :focus {
+  outline: none;
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #495057 !important;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #000000 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(71, 71, 71, 0.25) !important;
+  height: 40px !important;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+
+.bootstrap-select>select.mobile-device:focus+.dropdown-toggle, .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.dropdown.bootstrap-select:focus, button.btn.dropdown-toggle.btn-light:focus {
+  outline: none !important;
+}
+
+.abb-electron-form textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.abb-electron-form input[type="button"], .abb-electron-form button[type="submit"], .abb-electron-form input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #5a5a5a;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #5a5a5a;
+  box-shadow: inset 0px 1px 0px 0px #5a5a5a;
+  background-color: #1f2727;
+  border: 1px solid #5a5a5a;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  /* font-family: "Open Sans Condensed", sans-serif; */
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.abb-electron-form input[type="button"]:hover, .abb-electron-form button[type="submit"]:hover, .abb-electron-form input[type="submit"]:hover {
+  background: linear-gradient(to bottom, #000000 5%, #6b6b6b 100%);
+  background-color: #000000;
+}
+
+.multiselect-container {
+  height: 500px;
+  overflow-y: scroll;
+}

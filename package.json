@@ -1,0 +1,93 @@
+{
+  "name": "hitachi-abb",
+  "productName": "hitachi-abb",
+  "version": "1.0.1",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder",
+    "build-installer-all": "electron-builder -mw"
+  },
+  "build": {
+    "appId": "abb",
+    "extraFiles": [
+      "public"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/assets/images/logo.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "installerIcon": "src/assets/images/logo.ico",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "muktinaxtre",
+    "email": "mukti.naxtre@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "hitachi_abb"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-select": "^1.13.18",
+    "convert-excel-to-json": "^1.7.0",
+    "dotenv": "^8.2.0",
+    "ejs-electron": "^2.1.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "json2xls": "^0.1.2",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.10.5",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "12.0.5"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HITACHI ABB</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/venders/datepicker/dist/css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="../../assets/venders/datepicker/assets/libs/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/venders/fontawesome/css/all.min.css">
+    <style>
+        .dtp-picker-days,
+        .dtp-actual-day,
+        .dtp-actual-num {
+            display: none;
+        }
+
+        .dtp-header {
+            padding: 15px !important;
+        }
+
+        .dtp div.dtp-date,
+        .dtp div.dtp-time {
+            background: #1b1b1b !important;
+        }
+
+        .dtp>.dtp-content>.dtp-date-view>header.dtp-header {
+            background: #5d5e5c;
+        }
+
+        .dtp .p10>a {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../../assets/images/logo_horizontal.png" alt="" height="30px" style="margin:15px 0px 0px 50px;">
+        <button class="btn btn-secondary" onclick="location.reload()" style="float: right; margin: 10px;">Reset
+            filter</button>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <!-- <li>Jelena Jovanovic <span>Web Developer</span></li> -->
+
+            <!-- <li><span>General</span></li> -->
+            <li><a href="javascript:void(0)" onclick="loadNewData('table.ejs')">GIS Data</a></li>
+            <hr>
+            <li style="cursor: defaulr;"><span>Report</span></li>
+            <li onclick="loadNewData('viTable2.ejs')"><a href="javascript:void(0)">Visual Inspection</a></li>
+            <li onclick="loadNewData('ocTable.ejs')"><a href="javascript:void(0)">Operational Check</a></li>
+            <li onclick="loadNewData('pmTable.ejs')"><a href="javascript:void(0)">Periodic Maintenance</a></li>
+            <li onclick="loadNewData('cbcmTable.ejs')"><a href="javascript:void(0)">CBCM</a></li>
+            <li onclick="loadNewData('mfTable.ejs')"><a href="javascript:void(0)">Major Findings</a></li>
+            <li onclick="loadNewData('substationMaintenanceHistory.ejs')"><a href="javascript:void(0)">Substation
+                    Maintenance
+                    History</a></li>
+            <hr>
+        </ul>
+    </div>
