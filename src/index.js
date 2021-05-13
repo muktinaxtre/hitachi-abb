@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain, ipcRenderer, dialog } = require('electron');
 const ejse = require('ejs-electron')
 const path = require('path');
+const updater = require('./updater')
 require('./app')
 // const { substationsData, bayData, scadaData, zoneData, voltageData, gisData, allData } = require('./db')
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -25,6 +26,8 @@ require("./controllers/updateData/addSmhData")
 require("./controllers/substationMaintenanceHistory")
 let mainWindow
 function createWindow(htmlPath) {
+
+    setTimeout(updater, 2000)
     // Create the browser window.
     mainWindow = new BrowserWindow({
         width: 800,
